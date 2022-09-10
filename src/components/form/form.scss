@@ -1,0 +1,72 @@
+@import '../../styles/vars';
+
+
+.form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__success{
+        display: block;
+        margin: 50px auto;
+    }
+
+    &__title{
+        text-align: center;
+        @media($media-form){
+            padding: 0 16px;
+        }
+    }
+
+    &__input {
+        width: 380px;
+        height: 54px;
+        border-radius: 4px;
+        padding-left: 16px;
+
+        @media ($media-form) {
+            max-width: 328px;
+        }
+        
+        &__container:not(:last-child){
+            margin-bottom: 50px;
+        }
+    }
+
+    &__radio__list {
+        width: 380px;
+        margin-bottom: 37px;
+
+        @media($media-form){
+            max-width: 328px;
+        }
+
+        &-title {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__radio__item {
+        margin: 13px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__helper {
+        position: absolute;
+        bottom: -18px;
+        left: 16px;
+        color: #7E7E7E;
+        font-size: 12px;
+        line-height: 14px;
+    
+        &.invalid{
+          color: $error;
+        }
+      }
+
+      &__error{
+        color: $error;
+        transform: translateY(-20px);
+      }
+}

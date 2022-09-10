@@ -1,0 +1,44 @@
+@import '../../styles/vars';
+
+.custom__radio {
+    & ~ label {
+        cursor: pointer;
+    }
+
+    & input {
+        display: none;
+
+        &:checked~.checkmark::after {
+            transition: background-color 0.2s ease;
+            background-color: $secondary-color;
+        }
+
+    }
+
+    .checkmark {
+        position: relative;
+        display: block;
+        background: transparent;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $secondary-color;
+        margin-right: 12px;
+        cursor: pointer;
+
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: background-color 0.1s ease;
+
+        }
+    }
+}

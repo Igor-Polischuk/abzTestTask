@@ -1,0 +1,84 @@
+@import '../../styles/vars';
+
+body {
+  font-family: $font;
+  background: $background-color;
+}
+
+section {
+  margin-bottom: 140px;
+}
+
+main{
+  padding-bottom: 50px;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  max-width: 1210px;
+  padding: 0px 20px;
+  width: 100%;
+
+  @media($media1024) {
+    max-width: 944px;
+  }
+
+  @media($media768) {
+    max-width: 744px;
+  }
+
+  @media($media360) {
+    max-width: 338px;
+    padding: 0px 5px;
+  }
+}
+
+.title {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+
+.hero {
+  margin: 0 auto;
+  margin-bottom: 140px;
+  padding: 40px 16px;
+  width: 100%;
+  min-height: 650px;
+  max-width: 1170px;
+  background-image: url('../../assets/img/bg.jpg');
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  text-align: center;
+
+  @media ($media768) {
+    min-height: 500px;
+  }
+
+
+  & h1 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 21px;
+  }
+
+  & p {
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    max-width: 380px;
+
+    @media ($media360) {
+      margin-top: -29px;
+    }
+  }
+}

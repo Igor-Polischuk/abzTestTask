@@ -1,0 +1,65 @@
+@import '../../styles/vars';
+
+
+
+.form {
+  &__group {
+    position: relative;
+
+    
+  }
+
+  &__field {
+    font-family: inherit;
+    width: 100%;
+    border: 1px solid #D0CFCF;
+    outline: 0;
+    font-size: 16px;
+    color: #212121;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    &.invalid{
+      border: 1px solid $error;
+    }
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &__field:focus {
+      padding-bottom: 6px;
+    }
+
+    &__field:focus~.form__label {
+      color: #D0CFCF;
+    }
+
+    &:placeholder-shown~.form__label {
+      font-size: 16px;
+      cursor: text;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 13px;
+      background-color: $background-color;
+      padding: 0px 3px;
+    }
+  }
+
+  &__label,
+  &__field:focus~.form__label {
+    position: absolute;
+    top: 0px;
+    transform: translateY(-50%);
+    left: 16px;
+    background-color: $background-color;
+    display: block;
+    transition: 0.2s;
+    font-size: 12px;
+    color: #9b9b9b;
+
+    &.invalid{
+      color: $error;
+    }
+  }
+}

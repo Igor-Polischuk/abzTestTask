@@ -1,0 +1,26 @@
+@import './vars';
+
+
+.button{
+    display: inline-block;
+    height: 34px;
+    min-width: 100px;
+    padding: 4px 19px;
+    background-color: $primary-color;
+    border-radius: 80px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+    color: $black;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #FFE302;
+    }
+
+    &:disabled{
+        background-color: #B4B4B4;
+        color: #fff;
+    }
+}

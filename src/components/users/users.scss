@@ -1,0 +1,30 @@
+@import '../../styles/vars';
+
+.users {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 29px;
+        margin-bottom: 50px;
+
+        @media ($media1024) {
+            grid-template-columns: repeat(3, minmax(1fr, 282px));
+        }
+
+        @media ($media768) {
+            grid-template-columns: 1fr 1fr;
+            gap: 16px
+        }
+
+        @media (max-width: 466px){
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 20px;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin: 0 auto;
+    }
+}

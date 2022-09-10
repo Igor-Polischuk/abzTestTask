@@ -1,0 +1,62 @@
+@import '../../styles/vars';
+
+.form{
+    &__file__container{
+        width: 380px;
+        height: 54px;
+        margin-bottom: 50px;
+
+        @media($media-form){
+            max-width: 328px;
+        }
+    
+        input{
+            display: none;
+        }
+    }
+    
+    &__file__custom{
+        position: relative;
+        display: flex;
+        height: 100%;
+        cursor: pointer;
+       
+    
+        &:hover .form__file__custom__upload{
+            background-color: #e8e8e8;
+        }
+    
+        &__upload{
+            width: 83px;
+            padding: 0 15px;
+            border: 1px solid $black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            transition: 0.2s;
+
+            &.invalid{
+                border: 2px solid $error;
+            }
+        }
+    
+        &__name{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border: 1px solid #D0CFCF;
+            color: #D0CFCF;
+            border-left: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding-left: 16px;
+
+            &.invalid{
+                border: 2px solid $error;
+                border-left: none;
+            }
+        }
+    }
+}
